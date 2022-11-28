@@ -60,10 +60,12 @@ window.addEventListener(
         removeIframe("bitnob_embed");
         return;
       }
+
       if (event.data === "modal_opened") {
         removeIframe("loader");
         return;
       }
+
       if (event.data) {
         parseString(event.data);
         return event.data;
