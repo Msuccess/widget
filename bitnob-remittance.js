@@ -39,10 +39,12 @@ function setIframe(data, environment) {
   if (environment === "production") {
     url = `https://remit.bitnob.co/?senderName=${data.senderName}&pk=${data.pk}&callbackUrl=${data.callbackUrl}`;
   }
+
   if (environment === "dev") {
     url =
       "http://localhost:4200/?senderName=Jane%20Doe&pk=sk.b39706f.7be28e7da203890476&callbackUrl=https:%2F%2Fwebhook.site%2F94dac609-0d1d-402d-8b82-1bc619b13750";
   }
+
   iframe.src = url;
 
   iframe.setAttribute("allowtransparency", "true"),
